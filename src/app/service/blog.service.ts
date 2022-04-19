@@ -14,9 +14,12 @@ export class BlogService {
 
   getBlogItem = async (blogId: number): Promise<BlogItem> => {
     let blogItem = undefined;
-    for (let i = 0; i < blogDb.length; i++) {
-      blogDb[i].blogId === blogId ? (blogItem = blogDb[i]) : null;
-    }
+
+    blogDb.map((item) => {
+      if (item.blogId === blogId) {
+        blogItem = item;
+      }
+    });
 
     if (blogItem === undefined) {
       throw new Error('The blog with the specified id does not exist');
@@ -38,10 +41,10 @@ export class BlogService {
   };
 
   updateBlogItem = async (updatedBlogItem: BlogItem): Promise<void> => {
-    for (let i = 0; i < blogDb.length; i++) {
-      if (blogDb[i].blogId === updatedBlogItem.blogId) {
-        blogDb[i] = updatedBlogItem;
+    blogDb.map((item, index) => {
+      if (item.blogId === updatedBlogItem.blogId) {
+        blogDb[index] = updatedBlogItem;
       }
-    }
+    });
   };
 }

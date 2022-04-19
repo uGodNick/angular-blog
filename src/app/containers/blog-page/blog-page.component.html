@@ -1,0 +1,24 @@
+<header>
+  <h1>Блог</h1>
+</header>
+
+<div class="page-container">
+  <div class="option-section">
+    <button
+      class="button"
+      (click)="isDisplayPopup = true">
+      + Добавить
+    </button>
+  </div>
+
+  <div class="blog-list-section">
+    <blog-item
+      *ngFor="let blogItem of blogItems"
+      [blogItem]="blogItem"></blog-item>
+  </div>
+
+  <blog-create
+    [isDisplayComponent]="isDisplayPopup"
+    (onCloseComponent)="closePopup()"
+    (onCreateBlogItem)="createBlogItem($event)"></blog-create>
+</div>

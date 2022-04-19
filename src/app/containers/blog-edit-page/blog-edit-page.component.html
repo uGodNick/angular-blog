@@ -1,0 +1,56 @@
+<div class="page-container">
+  <div class="navigation-section">
+    <a
+      class="button"
+      routerLink="blog-list"
+      >Назад</a
+    >
+  </div>
+
+  <div class="input-section">
+    <label>Запись '{{ blogItem.blogTitle }}'</label>
+    <input
+      [class.not-valid-input]="isEmptyTitle"
+      [(ngModel)]="updatedBlogTitle" />
+  </div>
+
+  <div class="input-section">
+    <input
+      [class.not-valid-input]="isEmptyContent"
+      class="large-input"
+      [(ngModel)]="updatedBlogContent" />
+  </div>
+
+  <div class="option-section">
+    <button
+      class="button button_red"
+      (click)="isDisplayPopup = true">
+      Удалить
+    </button>
+
+    <button
+      class="button"
+      (click)="updateBlogItem()">
+      Сохранить
+    </button>
+  </div>
+
+  <div
+    [class.popup_hidden]="!isDisplayPopup"
+    class="popup delete-popup">
+    <span>Удалить?</span>
+    <div class="option-section">
+      <button
+        class="button"
+        (click)="isDisplayPopup = false">
+        Нет
+      </button>
+
+      <button
+        class="button"
+        (click)="deleteBlogItem()">
+        Да
+      </button>
+    </div>
+  </div>
+</div>

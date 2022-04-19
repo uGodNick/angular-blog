@@ -1,1 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
+body,
+.popup {
+  background-color: #f4f4f4;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+}
+
+textarea {
+  resize: none;
+  border: solid 1px #000;
+}
+
+input {
+  border: solid 1px #000;
+}
+
+.not-valid-input {
+  border-color: rgb(250, 149, 149);
+}
+
+.popup_hidden {
+  visibility: hidden;
+}
+
+.page-container {
+  position: relative;
+  max-width: 790px;
+  margin: auto;
+}
+
+.button {
+  display: block;
+  min-width: 100px;
+  color: #000;
+  background-color: #d9e8fb;
+  border: solid 1px #becfe4;
+  border-radius: 4px;
+  padding: 4px 5px 4px 5px;
+  text-align: center;
+}
+
+.button_red {
+  background-color: #f6cdcb;
+  border-color: #d4b4b3;
+}

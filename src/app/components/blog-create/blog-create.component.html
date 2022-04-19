@@ -1,0 +1,22 @@
+<div
+  class="popup create-popup"
+  [class.popup_hidden]="!isDisplayComponent">
+  <input
+    [class.not-valid-input]="isEmptyTitle"
+    [(ngModel)]="blogTitle" />
+  <textarea
+    [class.not-valid-input]="isEmptyContent"
+    [(ngModel)]="blogContent"></textarea>
+  <div class="options">
+    <button
+      class="button"
+      (click)="closeComponent()">
+      Отмена
+    </button>
+    <button
+      class="button"
+      (click)="createBlogItem()">
+      Сохранить
+    </button>
+  </div>
+</div>

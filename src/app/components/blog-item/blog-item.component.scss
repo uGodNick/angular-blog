@@ -1,0 +1,26 @@
+.blog-item {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  margin-left: 3rem;
+  width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: clip;
+}
+
+.blog-item-title {
+  font-weight: bold;
+  text-align: center;
+}
+
+.blog-item-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100px;
+  border: solid 1px #000;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  background-color: #fff;
+}

@@ -1,0 +1,40 @@
+header {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.option-section {
+  position: fixed;
+  bottom: 3rem;
+  right: 9rem;
+  display: flex;
+  justify-content: end;
+}
+
+.option-section button {
+  margin-top: 0.5rem;
+}
+
+.blog-list-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 992px) {
+  .option-section {
+    right: 10rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .option-section {
+    right: 15rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .option-section {
+    right: 22rem;
+  }
+}

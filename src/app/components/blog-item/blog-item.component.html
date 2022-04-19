@@ -1,0 +1,11 @@
+<div class="blog-item">
+  <div class="blog-item-title">{{ blogItem.blogTitle }}</div>
+  <div class="blog-item-content">
+    {{ blogItem.blogContent }}
+  </div>
+  <a
+    [routerLink]="['../blog', blogItem.blogId, 'edit']"
+    class="button"
+    >Перейти</a
+  >
+</div>
